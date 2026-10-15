@@ -1,0 +1,323 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\views\\consoleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\views\\consoleui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\tictactoe.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\tictactoe.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\services\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\services\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\repositories\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\repositories\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\repositories\\historyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\repositories\\historyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\repositories\\scorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\repositories\\scorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\bin\\Debug\\net8.0\\completedGames.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TicTacToe\\bin\\Debug\\net8.0\\completedGames.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\filehandlers\\filehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\filehandlers\\filehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\models\\completedgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\models\\completedgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\models\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\models\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\models\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\models\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\helpers\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\helpers\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\enums\\symbol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\enums\\symbol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\enums\\playername.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\enums\\playername.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|c:\\users\\harini.anandaraj.cbe-dlt-454\\downloads\\tictactoe-main\\tictactoe-main\\tictactoe\\tictactoe\\enums\\gamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC7BCE23-E553-4264-9EC5-E50A22B1AD47}|TicTacToe\\TicTacToe.csproj|solutionrelative:tictactoe\\enums\\gamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\harini.anandaraj.CBE-DLT-454\\AppData\\Local\\SourceServer\\21f819ee778ff4a4f6aa4296d8f5763a8e960cf81e3c071aad67d6fa463e84b6\\src\\Spectre.Console.Ansi\\AnsiMarkup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ScoreRepository.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Repositories\\ScoreRepository.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Repositories\\ScoreRepository.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Repositories\\ScoreRepository.cs",
+              "RelativeToolTip": "TicTacToe\\Repositories\\ScoreRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAIAxwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:24:29.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HistoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Repositories\\HistoryRepository.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Repositories\\HistoryRepository.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Repositories\\HistoryRepository.cs",
+              "RelativeToolTip": "TicTacToe\\Repositories\\HistoryRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADgvwwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:15:52.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameRepository.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Repositories\\GameRepository.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Repositories\\GameRepository.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Repositories\\GameRepository.cs",
+              "RelativeToolTip": "TicTacToe\\Repositories\\GameRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA4wA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:15:23.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameService.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Services\\GameService.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Services\\GameService.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Services\\GameService.cs",
+              "RelativeToolTip": "TicTacToe\\Services\\GameService.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAAK4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:15:48.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConsoleUI.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Views\\ConsoleUI.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Views\\ConsoleUI.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Views\\ConsoleUI.cs",
+              "RelativeToolTip": "TicTacToe\\Views\\ConsoleUI.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAA+wK0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T06:04:24.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HistoryService.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Services\\HistoryService.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Services\\HistoryService.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Services\\HistoryService.cs",
+              "RelativeToolTip": "TicTacToe\\Services\\HistoryService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAEwBgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:16:04.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TicTacToe.csproj",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\TicTacToe.csproj",
+              "RelativeDocumentMoniker": "TicTacToe\\TicTacToe.csproj",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\TicTacToe.csproj",
+              "RelativeToolTip": "TicTacToe\\TicTacToe.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-14T06:08:34.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "completedGames.json",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\bin\\Debug\\net8.0\\completedGames.json",
+              "RelativeDocumentMoniker": "TicTacToe\\bin\\Debug\\net8.0\\completedGames.json",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\bin\\Debug\\net8.0\\completedGames.json",
+              "RelativeToolTip": "TicTacToe\\bin\\Debug\\net8.0\\completedGames.json",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-15T10:14:26.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CompletedGame.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Models\\CompletedGame.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Models\\CompletedGame.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Models\\CompletedGame.cs",
+              "RelativeToolTip": "TicTacToe\\Models\\CompletedGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:13:16.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FileHandler.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\FileHandlers\\FileHandler.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\FileHandlers\\FileHandler.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\FileHandlers\\FileHandler.cs",
+              "RelativeToolTip": "TicTacToe\\FileHandlers\\FileHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:13:10.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Score.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Models\\Score.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Models\\Score.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Models\\Score.cs",
+              "RelativeToolTip": "TicTacToe\\Models\\Score.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:14:59.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Models\\Game.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Models\\Game.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Models\\Game.cs",
+              "RelativeToolTip": "TicTacToe\\Models\\Game.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:13:19.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Move.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Models\\Move.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Models\\Move.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Models\\Move.cs",
+              "RelativeToolTip": "TicTacToe\\Models\\Move.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:14:38.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Program.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Program.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Program.cs",
+              "RelativeToolTip": "TicTacToe\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:54:54.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Validators.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Helpers\\Validators.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Helpers\\Validators.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Helpers\\Validators.cs",
+              "RelativeToolTip": "TicTacToe\\Helpers\\Validators.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:13:12.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Symbol.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Enums\\Symbol.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Enums\\Symbol.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Enums\\Symbol.cs",
+              "RelativeToolTip": "TicTacToe\\Enums\\Symbol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:13:09.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PlayerName.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Enums\\PlayerName.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Enums\\PlayerName.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Enums\\PlayerName.cs",
+              "RelativeToolTip": "TicTacToe\\Enums\\PlayerName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:13:08.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GameMode.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Enums\\GameMode.cs",
+              "RelativeDocumentMoniker": "TicTacToe\\Enums\\GameMode.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\Downloads\\TicTacToe-main\\TicTacToe-main\\TicTacToe\\TicTacToe\\Enums\\GameMode.cs",
+              "RelativeToolTip": "TicTacToe\\Enums\\GameMode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:13:08.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AnsiMarkup.cs",
+              "DocumentMoniker": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\AppData\\Local\\SourceServer\\21f819ee778ff4a4f6aa4296d8f5763a8e960cf81e3c071aad67d6fa463e84b6\\src\\Spectre.Console.Ansi\\AnsiMarkup.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\21f819ee778ff4a4f6aa4296d8f5763a8e960cf81e3c071aad67d6fa463e84b6\\src\\Spectre.Console.Ansi\\AnsiMarkup.cs",
+              "ToolTip": "C:\\Users\\harini.anandaraj.CBE-DLT-454\\AppData\\Local\\SourceServer\\21f819ee778ff4a4f6aa4296d8f5763a8e960cf81e3c071aad67d6fa463e84b6\\src\\Spectre.Console.Ansi\\AnsiMarkup.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\SourceServer\\21f819ee778ff4a4f6aa4296d8f5763a8e960cf81e3c071aad67d6fa463e84b6\\src\\Spectre.Console.Ansi\\AnsiMarkup.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-15T09:06:26.158Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

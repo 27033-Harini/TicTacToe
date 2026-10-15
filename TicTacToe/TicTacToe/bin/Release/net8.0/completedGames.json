@@ -1,0 +1,84 @@
+[
+  {
+    "Winner": 2,
+    "Time": "2026-10-15T09:55:43.0157949+05:30",
+    "Moves": [
+      {
+        "Position": 0,
+        "Name": 1
+      },
+      {
+        "Position": 2,
+        "Name": 2
+      },
+      {
+        "Position": 1,
+        "Name": 1
+      },
+      {
+        "Position": 4,
+        "Name": 2
+      },
+      {
+        "Position": 3,
+        "Name": 1
+      },
+      {
+        "Position": 6,
+        "Name": 2
+      }
+    ]
+  },
+  {
+    "Winner": 1,
+    "Time": "2026-10-15T09:55:49.8631617+05:30",
+    "Moves": [
+      {
+        "Position": 0,
+        "Name": 1
+      },
+      {
+        "Position": 6,
+        "Name": 2
+      },
+      {
+        "Position": 1,
+        "Name": 1
+      },
+      {
+        "Position": 8,
+        "Name": 2
+      },
+      {
+        "Position": 2,
+        "Name": 1
+      }
+    ]
+  },
+  {
+    "Winner": 1,
+    "Time": "2026-10-15T10:03:20.0437291+05:30",
+    "Moves": [
+      {
+        "Position": 0,
+        "Name": 1
+      },
+      {
+        "Position": 2,
+        "Name": 2
+      },
+      {
+        "Position": 4,
+        "Name": 1
+      },
+      {
+        "Position": 5,
+        "Name": 2
+      },
+      {
+        "Position": 8,
+        "Name": 1
+      }
+    ]
+  }
+]
