@@ -125,6 +125,8 @@ namespace TicTacToe.Views
                 if (string.Equals(name, this._userName, StringComparison.OrdinalIgnoreCase))
                 {
                     AnsiConsole.MarkupLine("[red]Player 2's name cannot be the same as Player 1's name.[/]");
+                    Pause();
+                    continue;
                 }
 
                 _opponentName = name;
