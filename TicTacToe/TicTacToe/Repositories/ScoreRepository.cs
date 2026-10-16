@@ -20,7 +20,7 @@ namespace TicTacToe.Repositories
                 ?? new Score(userName);
         }
 
-        public void RecordGame(string userName, bool won)
+        public void RecordGame(string userName, bool won, bool isDraw)
         {
             List<Score> scores = _fileHandler.Load() ?? new List<Score>();
             Score? score = scores.FirstOrDefault(item =>
@@ -34,6 +34,7 @@ namespace TicTacToe.Repositories
 
             score.TotalGamesPlayed++;
             if (won) score.ScoreValue++;
+            if (isDraw) score.TotalGamesInDraw++;
             _fileHandler.Save(scores);
         }
     }

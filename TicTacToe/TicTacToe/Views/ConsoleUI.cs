@@ -1,5 +1,6 @@
-using Spectre.Console;
+﻿using Spectre.Console;
 using TicTacToe.Enums;
+using TicTacToe.Helpers;
 using TicTacToe.Models;
 using TicTacToe.Services;
 
@@ -9,44 +10,59 @@ namespace TicTacToe.Views
     {
         private readonly GameService _gameService;
         private readonly HistoryService _historyService;
+        private readonly UserService _userService;
         private string _userName = string.Empty;
         private string _opponentName = string.Empty;
 
-        public ConsoleUI(GameService gameService, HistoryService historyService)
+        public ConsoleUI(GameService gameService, HistoryService historyService, UserService userService)
         {
             _gameService = gameService;
             _historyService = historyService;
+            _userService = userService;
         }
 
         public void HandleMainMenuChoice()
         {
-            if (!AskForUserName()) return;
+            HandleMenuChoice();
+        }
 
+        public void HandleMenuChoice()
+        {
             while (true)
             {
-                Console.Clear();
-                WriteScoreTopLeft();
-                AnsiConsole.Write(Align.Center(new FigletText("TIC TAC TOE").Color(Color.Cyan1)));
-                var prompt = new SelectionPrompt<string>()
-                    .Title("[bold cyan]MAIN MENU[/]")
-                    .HighlightStyle(new Style(Color.Black, Color.Cyan1))
-                    .AddChoices("Play New Game", "View History / Replay", "View Total Score", "Close Application");
-                switch (AnsiConsole.Prompt(prompt))
+                if (!Login()) return;
+                bool loggedIn = true;
+                while (loggedIn)
                 {
-                    case "Play New Game": HandleModeChoice(); break;
-                    case "View History / Replay": ViewHistory(); break;
-                    case "View Total Score":
-                        Console.Clear();
-                        AnsiConsole.Write(Align.Center(new Rule("[yellow]YOUR SCORE[/]").RuleStyle("yellow")));
-                        Score score = _historyService.GetScoreDetails(_userName);
-                        AnsiConsole.MarkupLine($"[bold green]Player: {Markup.Escape(_userName)}[/]");
-                        AnsiConsole.MarkupLine($"[bold green]Total wins: {score.ScoreValue}[/]");
-                        AnsiConsole.MarkupLine($"[cyan]Games played: {score.TotalGamesPlayed}[/]");
-                        Pause();
-                        break;
-                    default:
-                        AnsiConsole.MarkupLine("[cyan]Thanks for playing. See you next time![/]");
-                        return;
+                    Console.Clear();
+                    WriteScoreTopLeft();
+                    AnsiConsole.Write(Align.Center(new FigletText("TIC TAC TOE").Color(Color.Cyan1)));
+                    var prompt = new SelectionPrompt<string>()
+                        .Title("[bold cyan]MAIN MENU[/]")
+                        .HighlightStyle(new Style(Color.Black, Color.Cyan1))
+                        .AddChoices("Play New Game", "View History / Replay", "View Total Score", "Logout", "Close Application");
+                    switch (AnsiConsole.Prompt(prompt))
+                    {
+                        case "Play New Game": HandleModeChoice(); break;
+                        case "View History / Replay": ViewHistory(); break;
+                        case "View Total Score":
+                            Console.Clear();
+                            AnsiConsole.Write(Align.Center(new Rule("[yellow]YOUR SCORE[/]").RuleStyle("yellow")));
+                            Score score = _historyService.GetScoreDetails(_userName);
+                            AnsiConsole.MarkupLine($"[bold green]Player: {Markup.Escape(_userName)}[/]");
+                            AnsiConsole.MarkupLine($"[bold green]Total wins: {score.ScoreValue}[/]");
+                            AnsiConsole.MarkupLine($"[cyan]Games played: {score.TotalGamesPlayed}[/]");
+                            Pause();
+                            break;
+                        case "Logout":
+                            AnsiConsole.MarkupLine("[cyan]Logging out...[/]");
+                            Thread.Sleep(500);
+                            loggedIn = false;
+                            break;
+                        default:
+                            AnsiConsole.MarkupLine("[cyan]Thanks for playing. See you next time![/]");
+                            return;
+                    }
                 }
             }
         }
@@ -62,7 +78,7 @@ namespace TicTacToe.Views
                     .PageSize(8)
                     .AddChoices(Enum.GetValues<GameMode>());
                 GameMode choice = AnsiConsole.Prompt(prompt);
-                if (choice == GameMode.Exit) return;
+                if (choice == GameMode.Back) return;
                 if (choice == GameMode.Manual) StartManualGame();
                 else StartGame(choice);
                 return;
@@ -78,27 +94,170 @@ namespace TicTacToe.Views
             if (key == ConsoleKey.X) Environment.Exit(0);
         }
 
-        private bool AskForUserName()
+        private bool Login()
         {
             while (true)
             {
                 Console.Clear();
                 AnsiConsole.Write(Align.Center(new FigletText("TIC TAC TOE").Color(Color.Cyan1)));
                 AnsiConsole.Write(Align.Center(new Rule("[cyan]WELCOME[/]")));
-                AnsiConsole.Write(Align.Right(new Markup("[grey]Press Escape to close application.[/]")));
-                AnsiConsole.MarkupLine("[white]Enter your player name (same name loads your saved score).[/]");
-                AnsiConsole.Markup("[cyan]Name: [/]");
-                string? name = ReadTextInput();
-                if (name == null) return false;
-                name = name.Trim();
-                if (name.Length == 0)
+                var choice = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                    .Title("[bold cyan]ACCOUNT[/]")
+                    .HighlightStyle(new Style(Color.Black, Color.Cyan1))
+                    .AddChoices("Login", "Sign-up", "Close Application"));
+
+                if (choice == "Close Application") return false;
+                if (choice == "Sign-up")
                 {
-                    AnsiConsole.MarkupLine("[red]Name cannot be empty.[/]");
+                    SignUp();
+                    continue;
+                }
+
+                Console.Clear();
+                AnsiConsole.Write(Align.Center(new Rule("[cyan]LOGIN[/]")));
+                AnsiConsole.MarkupLine("[grey]Enter your username or email address. Press Escape to go back.[/]");
+                AnsiConsole.Markup("[cyan]Username or email: [/]");
+                string? login = ReadTextInput();
+                if (login == null) continue;
+
+                login = login.Trim();
+                if (!Validators.IsValidLoginIdentifier(login))
+                {
+                    AnsiConsole.MarkupLine("[red]Enter a valid username.[/]");
                     Pause();
                     continue;
                 }
-                _userName = name;
+
+                AnsiConsole.Markup("[cyan]Password: [/]");
+                string? password = ReadPasswordInput();
+                if (password == null) continue;
+                if (!Validators.IsValidLoginPassword(password))
+                {
+                    AnsiConsole.MarkupLine("[red]Password cannot be empty.[/]");
+                    Pause();
+                    continue;
+                }
+
+                User? user = _userService.Login(login, password);
+                if (user == null)
+                {
+                    AnsiConsole.MarkupLine("[red]Invalid username/email or password.[/]");
+                    Pause();
+                    continue;
+                }
+
+                _userName = user.UserName;
                 return true;
+            }
+        }
+
+        private void SignUp()
+        {
+            while (true)
+            {
+                Console.Clear();
+                AnsiConsole.Write(Align.Center(new Rule("[cyan]CREATE ACCOUNT[/]")));
+                AnsiConsole.MarkupLine("[grey]Press Escape at any input to return.[/]");
+                AnsiConsole.Markup("[cyan]Username: [/]");
+                string? userName = ReadTextInput();
+                if (userName == null) return;
+                if (!Validators.IsValidUsername(userName))
+                {
+                    AnsiConsole.MarkupLine("[red]Username is not valid." +
+                        " It should be 3-30 characters long and contain only letters, " +
+                        "numbers, and underscores.[/]");
+                    Pause();
+                    continue;
+                }
+                string? email;
+                while (true)
+                {
+                    AnsiConsole.Markup("[cyan]Email: [/]");
+                    email = ReadTextInput();
+                    if (email == null) return;
+                    if (!Validators.IsValidEmail(email))
+                    {
+                        AnsiConsole.MarkupLine("[cyan] Email is not valid. [/]");
+                        Pause();
+                        continue;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                string? password;
+                while (true)
+                {
+                    AnsiConsole.Markup("[cyan]Password (minimum 8 characters): [/]");
+                    password = ReadPasswordInput();
+                    if (password == null) return;
+                    if (!Validators.IsValidPassword(password))
+                    {
+                        AnsiConsole.MarkupLine("[cyan]Password must be 8-30 characters long and contain " +
+                            "at least:\r\n• One uppercase letter (A-Z)\r\n• One lowercase letter (a-z)" +
+                            "\r\n• One number (0-9)\r\n• One special character (e.g., @, #, $, %, &)" +
+                            "\r\n• No spaces[/]");
+                        Pause();
+                        continue;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                string? confirmPassword;
+                while (true)
+                {
+                    AnsiConsole.Markup("[cyan]Confirm password: [/]");
+                    confirmPassword = ReadPasswordInput();
+                    if (confirmPassword == null) return;
+                    if (password != confirmPassword)
+                    {
+                        AnsiConsole.MarkupLine("[red]Passwords do not match.[/]");
+                        Pause();
+                        continue;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                var result = _userService.SignUp(userName, email, password);
+                AnsiConsole.MarkupLine(result.Success
+                    ? $"[green]{Markup.Escape(result.Message)}[/]"
+                    : $"[red]{Markup.Escape(result.Message)}[/]");
+                Pause();
+                if (result.Success) return;
+            }
+        }
+
+        private static string? ReadPasswordInput()
+        {
+            var input = new System.Text.StringBuilder();
+            while (true)
+            {
+                ConsoleKeyInfo key = Console.ReadKey(true);
+                if (key.Key == ConsoleKey.Escape) return null;
+                if (key.Key == ConsoleKey.Enter)
+                {
+                    Console.WriteLine();
+                    return input.ToString();
+                }
+                if (key.Key == ConsoleKey.Backspace)
+                {
+                    if (input.Length > 0)
+                    {
+                        input.Length--;
+                        Console.Write("\b \b");
+                    }
+                }
+                else if (!char.IsControl(key.KeyChar))
+                {
+                    input.Append(key.KeyChar);
+                    Console.Write("*");
+                }
             }
         }
 
@@ -122,6 +281,13 @@ namespace TicTacToe.Views
                     continue;
                 }
 
+                if (name.Length > 30)
+                {
+                    AnsiConsole.MarkupLine("[red]Name should not exceed the length of 30.[/]");
+                    Pause();
+                    continue;
+                }
+
                 if (string.Equals(name, this._userName, StringComparison.OrdinalIgnoreCase))
                 {
                     AnsiConsole.MarkupLine("[red]Player 2's name cannot be the same as Player 1's name.[/]");
@@ -141,7 +307,6 @@ namespace TicTacToe.Views
             {
                 ConsoleKeyInfo key = Console.ReadKey(true);
                 if (key.Key == ConsoleKey.Escape) return null;
-                if (key.Key == ConsoleKey.Escape) Environment.Exit(0);
                 if (key.Key == ConsoleKey.Enter)
                 {
                     Console.WriteLine();
@@ -166,7 +331,7 @@ namespace TicTacToe.Views
         private void WriteScoreTopLeft()
         {
             Score score = _historyService.GetScoreDetails(_userName);
-            AnsiConsole.MarkupLine($"[bold yellow]{Markup.Escape(_userName)} | Score: {score.ScoreValue} | Games: {score.TotalGamesPlayed}[/]");
+            AnsiConsole.MarkupLine($"[bold yellow]{Markup.Escape(_userName)} | Score: {score.ScoreValue} | Games: {score.TotalGamesPlayed} | Draws: {score.TotalGamesInDraw}[/]");
         }
 
         public void StartGame(GameMode mode)
@@ -190,13 +355,13 @@ namespace TicTacToe.Views
                     HandleGenerationOfMoves(game, mode);
                 }
 
-                Tuple<bool, Symbol> result = _gameService.HasWon(game.Board);
+                Tuple<bool, Symbol, int[]?> result = _gameService.HasWon(game.Board);
                 if (result.Item1)
                 {
-                    DisplayBoard(game, "GAME OVER");
+                    DisplayBoard(game, "GAME OVER", result.Item3);
                     string? winner = DisplayWin(game, result.Item2);
-                    _historyService.AddGame(_userName, DateTime.Now, game.Moves, mode, winner);
-                    _historyService.RecordCompletedGame(_userName, winner);
+                    _historyService.AddGame(_userName, DateTime.Now, game.Moves, mode, winner, result.Item3);
+                    _historyService.RecordCompletedGame(_userName, winner, false);
                     Pause();
                     return;
                 }
@@ -205,7 +370,7 @@ namespace TicTacToe.Views
                     DisplayBoard(game, "GAME OVER");
                     AnsiConsole.MarkupLine("[yellow]It's a draw![/]");
                     _historyService.AddGame(_userName, DateTime.Now, game.Moves, mode);
-                    _historyService.RecordCompletedGame(_userName, null);
+                    _historyService.RecordCompletedGame(_userName, null, true);
                     Pause();
                     return;
                 }
@@ -238,13 +403,13 @@ namespace TicTacToe.Views
                 }
                 if (move == -1) return;
 
-                Tuple<bool, Symbol> result = _gameService.HasWon(game.Board);
+                Tuple<bool, Symbol, int[]?> result = _gameService.HasWon(game.Board);
                 if (result.Item1)
                 {
-                    DisplayBoard(game, "GAME OVER");
+                    DisplayBoard(game, "GAME OVER", result.Item3);
                     string? winner = DisplayManualWin(game, result.Item2);
-                    _historyService.AddGame(_userName, DateTime.Now, game.Moves, GameMode.Manual, winner);
-                    _historyService.RecordCompletedGame(_userName, winner);
+                    _historyService.AddGame(_userName, DateTime.Now, game.Moves, GameMode.Manual, winner, result.Item3);
+                    _historyService.RecordCompletedGame(_userName, winner, false);
                     Pause();
                     return;
                 }
@@ -253,7 +418,7 @@ namespace TicTacToe.Views
                     DisplayBoard(game, "GAME OVER");
                     AnsiConsole.MarkupLine("[yellow]It's a draw![/]");
                     _historyService.AddGame(_userName, DateTime.Now, game.Moves, GameMode.Manual);
-                    _historyService.RecordCompletedGame(_userName, null);
+                    _historyService.RecordCompletedGame(_userName, null, true);
                     Pause();
                     return;
                 }
@@ -351,21 +516,28 @@ namespace TicTacToe.Views
             return $"{Cell(0)} {Cell(1)} {Cell(2)} \n{Cell(3)} {Cell(4)} {Cell(5)} \n{Cell(6)} {Cell(7)} {Cell(8)}\n";
         }
 
-        private void DisplaySnapshot(Symbol[] board, string subtitle)
+        private void DisplaySnapshot(Symbol[] board, string subtitle, int[]? winningPositions = null)
         {
             AnsiConsole.MarkupLine($"[grey]{Markup.Escape(subtitle)}[/]");
-            var table = new Table().Border(TableBorder.Heavy).BorderColor(Color.Cyan1).HideHeaders();
+            var table = new Table().HideHeaders().Border(TableBorder.Heavy).BorderColor(Color.Cyan1).ShowRowSeparators();
             // Define the three columns before adding the three cells in each board row.
-            table.AddColumn(new TableColumn(" "));
-            table.AddColumn(new TableColumn(" "));
-            table.AddColumn(new TableColumn(" "));
+            table.AddColumn(" ");
+            table.AddColumn(" ");
+            table.AddColumn(" ");
+            // AnsiConsole.Write(Align.Center(table));
             for (int i = 0; i < 3; i++)
             {
                 var row = new List<string>();
                 for (int j = 0; j < 3; j++)
                 {
-                    Symbol symbol = board[i * 3 + j];
-                    row.Add(symbol == Symbol.Empty ? " " : symbol == Symbol.X ? "[bold dodgerblue1] X [/]" : "[bold hotpink] O [/]");
+                    int position = i * 3 + j;
+                    Symbol symbol = board[position];
+                    string cell = symbol == Symbol.Empty ? " " : symbol == Symbol.X ? "[bold dodgerblue1] X [/]" : "[bold hotpink] O [/]";
+                    if (winningPositions != null && winningPositions.Contains(position))
+                    {
+                        cell = symbol == Symbol.X ? "[white on bold dodgerblue1] X [/]" : "[white on bold hotpink] O [/]";
+                    }
+                    row.Add(cell);
                 }
                 table.AddRow(row.Select(x => new Markup(x)));
             }
@@ -401,14 +573,14 @@ namespace TicTacToe.Views
         public static void DisplayManualChoice(Symbol symbol) =>
             AnsiConsole.MarkupLine($"[cyan]Player 1 is {symbol}; Player 2 is {(symbol == Symbol.X ? Symbol.O : Symbol.X)}.[/]");
 
-        public void DisplayBoard(Game game, string subtitle = "")
+        public void DisplayBoard(Game game, string subtitle = "", int[]? winningPositions = null)
         {
             Console.Clear();
             AnsiConsole.Write(Align.Right(new Markup("[grey]Press Escape to go back to main manu. Press [[X]] to Quit[/]")));
             WriteScoreTopLeft();
             AnsiConsole.Write(Align.Center(new FigletText("TIC TAC TOE").Color(Color.Cyan1)));
             if (!string.IsNullOrWhiteSpace(subtitle)) AnsiConsole.MarkupLine($"[bold yellow]{Markup.Escape(subtitle)}[/]");
-            DisplaySnapshot(game.Board, "Use Arrows to select a cell, Enter to place your mark, Esc to quit this game.");
+            DisplaySnapshot(game.Board, "Use Arrows to select a cell, Enter to place your mark, Esc to quit this game.", winningPositions);
         }
 
         public string GetCell(Game game, int index)
@@ -426,7 +598,7 @@ namespace TicTacToe.Views
                 AnsiConsole.Write(Align.Center(new FigletText("TIC TAC TOE").Color(Color.Cyan1)));
                 AnsiConsole.MarkupLine($"[bold yellow]{Markup.Escape($"{name} ({symbol}) — choose a square")}[/]");
                 // Draw a numbered board with the current cursor highlighted.
-                var table = new Table().Border(TableBorder.Heavy).BorderColor(Color.Cyan1);
+                var table = new Table().Border(TableBorder.Heavy).BorderColor(Color.Cyan1).HideHeaders().ShowRowSeparators();
                 // Each board row contains three cells, so declare three columns first.
                 table.AddColumn(new TableColumn(" "));
                 table.AddColumn(new TableColumn(" "));

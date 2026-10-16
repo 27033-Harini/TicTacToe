@@ -15,16 +15,20 @@ namespace TicTacToe.Services
             _scoreRepository = scoreRepository;
         }
 
-        public void AddGame(string name, DateTime completionTime, List<Move> moves, GameMode mode, string? winner = null)
+        public void AddGame(string name, DateTime completionTime, List<Move> moves, GameMode mode, string? winner = null, int[]? winningPositions = null)
         {
+            if (winner != null)
+            {
+                _historyRepository.Add(new CompletedGame(name, completionTime, moves, mode, winner, winningPositions));
+            }
             _historyRepository.Add(new CompletedGame(name, completionTime, moves, mode, winner));
         }
 
         public List<CompletedGame> GetAll(string userName) => _historyRepository.GetAll(userName);
 
-        public void RecordCompletedGame(string userName, string? winner)
+        public void RecordCompletedGame(string userName, string? winner, bool isDraw)
         {
-            _scoreRepository.RecordGame(userName, winner == userName);
+            _scoreRepository.RecordGame(userName, winner == userName, isDraw);
         }
 
         public Score GetScoreDetails(string userName) => _scoreRepository.Get(userName);

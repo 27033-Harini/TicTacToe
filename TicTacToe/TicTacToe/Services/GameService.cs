@@ -61,7 +61,7 @@ namespace TicTacToe.Services
             }
 
             tempBoard[position] = game.Player;
-            Tuple<bool, Symbol> result = HasWon(tempBoard);
+            Tuple<bool, Symbol, int[]?> result = HasWon(tempBoard);
             return result.Item1 && result.Item2 == tempBoard[position];
         }
 
@@ -93,7 +93,7 @@ namespace TicTacToe.Services
                 return -1;
             }
 
-            Tuple<bool, Symbol> result;
+            Tuple<bool, Symbol, int[]?> result;
             for (int i = 0; i < tempBoard.Length; i++)
             {
                 if (tempBoard[i] != Symbol.Empty)
@@ -105,7 +105,14 @@ namespace TicTacToe.Services
                 result = this.HasWon(tempBoard);
                 if (result.Item1)
                 {
-                    return i;
+                    if (game.Board[i] != Symbol.Empty)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        return i;
+                    }
                 }
                 else
                 {
@@ -125,7 +132,7 @@ namespace TicTacToe.Services
                 return -1;
             }
 
-            Tuple<bool, Symbol> result;
+            Tuple<bool, Symbol, int[]?> result;
             for (int i = 0; i < tempBoard.Length; i++)
             {
                 if (tempBoard[i] != Symbol.Empty)
@@ -182,7 +189,15 @@ namespace TicTacToe.Services
 
             if (Random.Shared.Next(1, 101) <= 15)
             {
-                bestMove = GetBlockingMove(game);
+                if (Random.Shared.Next(1, 101) <= 15)
+                {
+                    int blockingMove = GetBlockingMove(game);
+
+                    if (blockingMove >= 0)
+                    {
+                        bestMove = blockingMove;
+                    }
+                }
             }
 
             if (bestMove >= 0)
@@ -194,7 +209,7 @@ namespace TicTacToe.Services
 
         public int Minimax(Game game, bool isMaximizing)
         {
-            Tuple<bool, Symbol> result = this.HasWon(game.Board);
+            Tuple<bool, Symbol, int[]?> result = this.HasWon(game.Board);
             if (result.Item1 && result.Item2 == game.Computer)
             {
                 return 10;
@@ -254,7 +269,7 @@ namespace TicTacToe.Services
         }
 
 
-        public Tuple<bool, Symbol> HasWon(Symbol[] board)
+        public Tuple<bool, Symbol, int[]?> HasWon(Symbol[] board)
         {
             int[][] winningLines =
             {
@@ -272,11 +287,11 @@ namespace TicTacToe.Services
             {
                 if (board[line[0]] != Symbol.Empty && board[line[0]] == board[line[1]] && board[line[1]] == board[line[2]])
                 {
-                    return new Tuple<bool, Symbol>(true, board[line[0]]);
+                    return new Tuple<bool, Symbol, int[]?>(true, board[line[0]], line);
                 }
             }
 
-            return new Tuple<bool, Symbol>(false, Symbol.Empty);
+            return new Tuple<bool, Symbol, int[]?>(false, Symbol.Empty, null);
         }
 
         public bool HasDraw(Game game)
