@@ -6,6 +6,6 @@
         Medium,
         ImpossibleToWin,
         Manual,
-        Exit,
+        Back,
     }
 }
